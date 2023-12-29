@@ -1,28 +1,39 @@
-#include <bits/stdc++.h>
 #include <iostream>
+
 using namespace std;
-int main(){
-    int range = 50;
-    int num, n;
-    int attempts = 0;
 
-    srand(time(0));
-    num = rand()%range;
-    cout << "Welcome to the Number Guessing Game!\n\n";
-    cout << "Try to guess number between 1 and 50\n\n";
+int main()
+{
+    int a, b, c, sum, sub, mul, div;
+    cout << "Enter first number:\t";
+    cin >> a;
+    cout << "Enter second number:\t";
+    cin >> b;
 
-    do{
-    cout << "Enter your Guess:\n";
-    cin >> n;
-    attempts++;
+    cout << "Enter your choice:\n\n";
 
-    if (n<num)
-        cout << "\nThe guess is too low\n\n";
-    else if (n>num)
-        cout << "\nThe guess is too high\n\n";
-    else if (n=num)
-        cout << "\nCongratulations! You guessed the correct number in " << attempts << " attempts.\n";
-}
-    while (n != num);
+    cout <<"1.  Addition\n";
+    cout <<"2.  Subtraction\n";
+    cout <<"3.  Multiplication\n";
+    cout <<"4.  Division\n";
+
+    cin >> c;
+
+    if (c==1){
+        sum = a+b;
+        cout <<"Addition is:\t" << a << " + " << b << " = " << sum << endl;
+    }
+    else if (c==2){
+        sub = a-b;
+        cout <<"Subtraction is:\t" << a << " - " << b << " = " << sub << endl;
+    }
+    else if (c==3){
+        mul = a*b;
+        cout <<"Multiplication is:\t" << a << " x " << b << " = " << mul << endl;
+    }
+    else if (c==4){
+        div = a/b;
+        cout <<"Division is:\t" << a << " / " << b << " = " << div << endl;
+    }
     return 0;
 }
